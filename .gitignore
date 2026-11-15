@@ -31,3 +31,14 @@ packages/launcher/src-tauri/gen/
 crates/plugin/inspector-dist/
 examples/*/dist/
 examples/*/src-tauri/target/
+
+# Local working notes and agent scaffolding. These live in the working copy only
+# and are deliberately not part of the repository.
+/BACKLOG.md
+/KANBAN.md
+/AGENTS.md
+/state.json
+/.qa/
+/runs/
+/work/
+/docs/HARDLYUI_PLAN.md
