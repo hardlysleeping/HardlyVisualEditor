@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented here. Version numbers stay in sync across the Rust crates and `@iamthamanic/visual-editor-sdk`.
 
+> 0.2.0 and 0.2.1 were built on a private development line before this
+> repository existed. Their entries are kept for history; the first release
+> published here is 0.2.2.
+
 ## [0.2.2] - 2026-11-14
 
 ### Fixed
@@ -9,13 +13,13 @@ All notable changes to this project are documented here. Version numbers stay in
 - The element picker now starts listening as soon as the editor is already on. After a reload, or any state push that arrived before the toolbar was clicked, the button used to light up while clicks on the page did nothing until it was switched off and on again.
 - The toolbar's picker, context panel and DevTools buttons expose their pressed state to screen readers and automation instead of only changing colour.
 
-## [0.2.1] - 2026-11-14
+## 0.2.1 - 2026-11-14
 
 ### Fixed
 
 - Confirming a destructive action no longer opens a raw WebKit box titled "JavaScript - tauri://localhost". Restoring a checkpoint, deleting one, pruning to the newest 20, resetting every edit and removing a picture now ask in the app's own dialog, with the consequence written out and Cancel as the safe answer. Escape, the backdrop and Cancel all decline.
 
-## [0.2.0] - 2026-11-13
+## 0.2.0 - 2026-11-13
 
 ### Added
 
@@ -74,5 +78,3 @@ All notable changes to this project are documented here. Version numbers stay in
 [0.1.1]: https://github.com/iamthamanic/tauri-plugin-visual-editor/releases/tag/v0.1.1
 [0.1.0]: https://github.com/iamthamanic/tauri-plugin-visual-editor/releases/tag/v0.1.0
 [0.2.2]: https://github.com/hardlysleeping/HardlyVisualEditor/releases/tag/v0.2.2
-[0.2.1]: https://github.com/hardlysleeping/HardlyVisualEditor/releases/tag/v0.2.1
-[0.2.0]: https://github.com/hardlysleeping/HardlyVisualEditor/releases/tag/v0.2.0
