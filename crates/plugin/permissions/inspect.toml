@@ -1,0 +1,24 @@
+"$schema" = "schemas/schema.json"
+
+[[set]]
+identifier = "inspect"
+description = "Selection and session control commands"
+permissions = [
+  "allow-enable",
+  "allow-disable",
+  "allow-toggle",
+  "allow-set-target-webview",
+  "allow-pin-target-webview",
+  "allow-unpin-target-webview",
+  "allow-revalidate",
+  "allow-clear-session",
+  "allow-hard-reload",
+  "allow-report-selection",
+  "allow-notify-navigation",
+  "allow-set-issue-text",
+  "allow-remove-element",
+  "allow-remove-capture",
+  "allow-set-primary-capture",
+  "allow-set-capture-included",
+  "allow-update-settings",
+]

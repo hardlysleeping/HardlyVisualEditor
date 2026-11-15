@@ -1,0 +1,8 @@
+# Local-only override while developing the plugin against your app.
+# Do NOT commit this: save it as <your-app>/src-tauri/.cargo/config.toml
+#
+# Replace the paths with your machine's path to this repository.
+
+[patch.crates-io]
+tauri-plugin-visual-editor = { path = "/Users/you/.../tauri-plugin-visual-editor/crates/plugin", features = ["visual-inspector"] }
+tauri-plugin-visual-editor-core = { path = "/Users/you/.../tauri-plugin-visual-editor/crates/core" }

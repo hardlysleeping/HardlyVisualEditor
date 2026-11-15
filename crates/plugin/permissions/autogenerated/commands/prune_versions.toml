@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-prune-versions"
+description = "Enables the prune_versions command without any pre-configured scope."
+commands.allow = ["prune_versions"]
+
+[[permission]]
+identifier = "deny-prune-versions"
+description = "Denies the prune_versions command without any pre-configured scope."
+commands.deny = ["prune_versions"]

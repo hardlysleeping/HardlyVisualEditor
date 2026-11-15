@@ -1,0 +1,11 @@
+{
+  "name": "@hardlyui/messages",
+  "version": "0.2.2",
+  "private": true,
+  "description": "Single source for HardlyUI's plain-language failure messages, vendored into the guest runtime, inspector app and SDK overlay",
+  "type": "module",
+  "scripts": {
+    "vendor": "node scripts/vendor.mjs",
+    "check": "node scripts/vendor.mjs --check"
+  }
+}

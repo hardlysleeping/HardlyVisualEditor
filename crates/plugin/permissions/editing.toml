@@ -1,0 +1,17 @@
+"$schema" = "schemas/schema.json"
+
+[[set]]
+identifier = "editing"
+description = "Development-only HardlyUI editing, transaction history, and reset"
+permissions = [
+  "allow-preview-style",
+  "allow-commit-edit",
+  "allow-undo-edit",
+  "allow-redo-edit",
+  "allow-reset-edits",
+  "allow-get-component-library",
+  "allow-save-component-library",
+  "allow-save-version",
+  "allow-list-versions",
+  "allow-restore-version",
+]

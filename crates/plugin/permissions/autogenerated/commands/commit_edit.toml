@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-commit-edit"
+description = "Enables the commit_edit command without any pre-configured scope."
+commands.allow = ["commit_edit"]
+
+[[permission]]
+identifier = "deny-commit-edit"
+description = "Denies the commit_edit command without any pre-configured scope."
+commands.deny = ["commit_edit"]

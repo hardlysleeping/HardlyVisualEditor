@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-list-published"
+description = "Enables the list_published command without any pre-configured scope."
+commands.allow = ["list_published"]
+
+[[permission]]
+identifier = "deny-list-published"
+description = "Denies the list_published command without any pre-configured scope."
+commands.deny = ["list_published"]

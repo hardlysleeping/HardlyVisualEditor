@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-reset-edits"
+description = "Enables the reset_edits command without any pre-configured scope."
+commands.allow = ["reset_edits"]
+
+[[permission]]
+identifier = "deny-reset-edits"
+description = "Denies the reset_edits command without any pre-configured scope."
+commands.deny = ["reset_edits"]

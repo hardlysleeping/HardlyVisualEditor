@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+target/
+dist/
+*.tsbuildinfo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# QA artifacts
+.qa/evidence/
+.qa/test-results/
+
+# Screenshots (local dev)
+.visual-editor/
+visual-editor/screenshots/
+
+# Env
+.env
+.env.local
+
+# Build outputs
+packages/*/dist/
+packages/launcher/src-tauri/gen/
+crates/plugin/inspector-dist/
+examples/*/dist/
+examples/*/src-tauri/target/

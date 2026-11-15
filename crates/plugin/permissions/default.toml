@@ -1,0 +1,13 @@
+"$schema" = "schemas/schema.json"
+
+[default]
+description = "Default inspector read/export commands (open, close, getState, exportContext)"
+permissions = [
+  "allow-open",
+  "allow-close",
+  "allow-get-state",
+  "allow-export-context",
+  "allow-copy-context-bundle",
+  "allow-copy-screenshot-path",
+  "allow-open-screenshot-folder",
+]

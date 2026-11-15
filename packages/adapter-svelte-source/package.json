@@ -1,0 +1,32 @@
+{
+  "name": "@hardlyui/adapter-svelte-source",
+  "version": "0.1.0",
+  "description": "Svelte source adapter for HardlyUI: dev-only element coordinates and reviewed source writes",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "vendor": "node scripts/vendor.mjs"
+  },
+  "peerDependencies": {
+    "svelte": ">=5.0.0",
+    "vite": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "svelte": "^5.28.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}

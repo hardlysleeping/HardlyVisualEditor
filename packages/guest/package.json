@@ -1,0 +1,31 @@
+{
+  "name": "@tauri-plugin/visual-editor",
+  "version": "0.2.2",
+  "description": "Guest runtime injected into host WebViews",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "bundle": "node scripts/bundle-guest.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@tauri-apps/api": "^2.5.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.5",
+    "happy-dom": "^17.4.7",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@tauri-plugin/visual-editor-cli",
+  "version": "0.2.2",
+  "description": "Project setup CLI for the Tauri visual editor plugin",
+  "type": "module",
+  "bin": {
+    "hardlyui": "./bin/hardlyui.mjs"
+  },
+  "scripts": {
+    "hardlyui": "node ./bin/hardlyui.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

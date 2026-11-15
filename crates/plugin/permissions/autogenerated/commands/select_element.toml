@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-select-element"
+description = "Enables the select_element command without any pre-configured scope."
+commands.allow = ["select_element"]
+
+[[permission]]
+identifier = "deny-select-element"
+description = "Denies the select_element command without any pre-configured scope."
+commands.deny = ["select_element"]

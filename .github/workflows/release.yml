@@ -1,0 +1,68 @@
+name: Release bundles
+
+# Builds the desktop bundles on a version tag and attaches them to the release.
+# The bundles are built inside a container locally; CI needs the WebKit/GTK
+# development packages instead, which is what the apt step installs.
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag to attach bundles to'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  bundles:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+
+      - name: Install Tauri build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf \
+            libgtk-3-dev \
+            libsoup-3.0-dev \
+            libjavascriptcoregtk-4.1-dev
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: packages/launcher/src-tauri -> target
+
+      - run: npm ci
+      - run: npm run build:launcher
+
+      - name: Build bundles
+        working-directory: packages/launcher
+        run: ../../node_modules/.bin/tauri build --features custom-protocol --bundles appimage,deb,rpm
+
+      - name: Attach bundles to the release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          # The launcher crate is a member of the root workspace, so cargo puts
+          # the release build in the repository's own target directory.
+          files: |
+            target/release/bundle/appimage/*.AppImage
+            target/release/bundle/deb/*.deb
+            target/release/bundle/rpm/*.rpm
+          fail_on_unmatched_files: true
